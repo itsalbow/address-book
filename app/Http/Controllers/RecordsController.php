@@ -29,8 +29,8 @@ class RecordsController extends Controller
 	 public function store(Request $request)
 	 {
 	 	$this->validate($request, [
-			'first_name' => 'required',
-			'last_name'=> 'required',
+			'first_name' => 'required|max:15',
+			'last_name'=> 'required|max:25',
 			'phone' => 'required',
 			'email' => 'required|email',
 			'address' => 'required|min:10'
